@@ -19,7 +19,7 @@ Run the following to set up first Flectra instance @ `localhost:10020` (default 
 ``` bash
 curl -s https://raw.githubusercontent.com/6Ministers/flectra-2.0dev-docker-compose/master/run.sh | sudo bash -s flectra-one 10020 20020
 ```
-and/or run the following to set up another Flectra instance @ `localhost:11020` (default master password: `minhng.info`):
+and/or run the following to set up another Flectra instance @ `localhost:11020` (default master password: `master.password`):
 
 ``` bash
 curl -s https://raw.githubusercontent.com/6Ministers/flectra-2.0dev-docker-compose/master/run.sh | sudo bash -s flectra-two 11020 21020
