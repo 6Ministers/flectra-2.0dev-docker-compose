@@ -23,6 +23,7 @@ and/or run the following to set up another Flectra instance @ `localhost:11020` 
 
 ``` bash
 curl -s https://raw.githubusercontent.com/6Ministers/flectra-2.0dev-docker-compose/master/run.sh | sudo bash -s flectra-two 11020 21020
+```
 
 Some arguments:
 * First argument (**flectra-one**): Flectra deploy folder
