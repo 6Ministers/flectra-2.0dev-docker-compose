@@ -5,7 +5,7 @@
 Install docker and docker-compose:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/6Ministers/flectra-2.0dev-docker-compose/master/setup.sh | sudo bash
+curl -s https://raw.githubusercontent.com/6Ministers/flectra-2.0dev-docker-compose/master/setup.sh | sudo bash -s
 ```
 
 Run the following to set up first Flectra instance @ `localhost:10020` (default master password: `master.password`):
