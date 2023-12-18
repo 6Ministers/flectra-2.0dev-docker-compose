@@ -3,7 +3,6 @@ services:
   db:
     container_name: postgres
     image: postgres:14
-    user: flectra    
     restart: always             # run as a service    
     ports:
       - 5432:5432    
