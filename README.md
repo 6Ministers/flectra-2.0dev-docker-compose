@@ -7,7 +7,7 @@ Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https
 ``` bash
 curl -s https://raw.githubusercontent.com/6Ministers/flectra-2.0dev-docker-compose/master/run.sh | sudo bash -s flectra-one 10020 20020
 ```
-and/or run the following to set up another Flectra instance @ `localhost:11017` (default master password: `minhng.info`):
+and/or run the following to set up another Flectra instance @ `localhost:11020` (default master password: `minhng.info`):
 
 ``` bash
 curl -s https://raw.githubusercontent.com/6Ministers/flectra-2.0dev-docker-compose/master/run.sh | sudo bash -s flectra-two 11020 21020
@@ -41,7 +41,7 @@ $ sudo chmod -R 777 etc
 $ sudo chmod -R 777 postgresql
 ```
 
-- If you want to start the server with a different port, change **10017** to another value in **docker-compose.yml** inside the parent dir:
+- If you want to start the server with a different port, change **10020** to another value in **docker-compose.yml** inside the parent dir:
 
 ```
 ports:
