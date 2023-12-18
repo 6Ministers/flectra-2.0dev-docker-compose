@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   db:
     container_name: postgres
@@ -17,11 +18,10 @@ services:
   flectra:
     container_name: flectra2.0
     image: flectrahq/flectra:2.0
-    user: flectra        
     restart: always             # run as a service 
     ports:
-      - 127.0.0.1:10020:7073
-      - 127.0.0.1:20020:7072 # live chat
+      - 10020:7073
+      - 20020:7072 # live chat
     tty: true
     command: --
     environment:
@@ -41,5 +41,5 @@ services:
     depends_on:
       - db
     hostname: flectra
-
+    user: flectra
     
