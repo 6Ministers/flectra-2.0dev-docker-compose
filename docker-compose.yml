@@ -39,7 +39,6 @@ services:
       - ./etc/logs:/var/log/flectra:rw
       - ./etc/geoip-db:/usr/share/GeoIP:ro
       # - ./entrypoint.sh:/entrypoint.sh   # if you want to install additional Python packages, uncomment this line!
-    restart: always             # run as a service
     depends_on:
       - db
     hostname: flectra
