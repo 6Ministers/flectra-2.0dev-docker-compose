@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo apt-get purge needrestart
-
 DESTINATION=$1
 PORT=$2
 CHAT=$3
