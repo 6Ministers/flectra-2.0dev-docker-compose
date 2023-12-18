@@ -5,8 +5,6 @@ services:
     image: postgres:14
     user: root
     restart: always             # run as a service    
-    ports:
-      - 5432:5432    
     environment:
       POSTGRES_USER: flectra
       POSTGRES_PASSWORD: password
@@ -25,7 +23,6 @@ services:
     command: --
     environment:
       - HOST=db
-      - PORT=5432
       - USER=flectra
       - PASSWORD=password
     volumes:
