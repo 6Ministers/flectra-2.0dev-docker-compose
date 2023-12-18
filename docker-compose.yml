@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  db:
+    container_name: postgres
+    image: postgres:14
+    user: flectra    
+    restart: always             # run as a service    
+    ports:
+      - 5432:5432    
+    environment:
+      POSTGRES_USER: flectra
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+    volumes:
+        - ./postgresql/db:/var/lib/postgresql/data:rw
+    hostname: flectradb
+    
+  flectra:
+    container_name: flectra2.0
+    image: flectrahq/flectra:2.0
+    user: flectra        
+    restart: always             # run as a service 
+    ports:
+      - 127.0.0.1:10020:7073
+      - 127.0.0.1:20020:7072 # live chat
+    tty: true
+    command: --
+    environment:
+      - HOST=db
+      - PORT=5432
+      - USER=flectra
+      - PASSWORD=password
+    volumes:
+      # - ./etc/timezone:/etc/timezone:ro
+      # - ./etc/localtime:/etc/localtime:ro
+      - ./etc/config:/etc/flectra:rw
+      - ./etc/addons:/mnt/extra-addons:ro
+      - ./etc/data:/var/lib/flectra:rw
+      - ./etc/logs:/var/log/flectra:rw
+      - ./etc/geoip-db:/usr/share/GeoIP:ro
+      # - ./entrypoint.sh:/entrypoint.sh   # if you want to install additional Python packages, uncomment this line!
+    restart: always             # run as a service
+    depends_on:
+      - db
+    hostname: flectra
+
+    
