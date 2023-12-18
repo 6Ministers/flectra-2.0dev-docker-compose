@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # This script setups dockerized Redash on Ubuntu 20.04.
+
+
+sudo apt-get purge needrestart
+
 set -eu
 
 install_docker() {
