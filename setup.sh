@@ -3,7 +3,7 @@
 # purge needrestart
 sudo apt-get purge needrestart
 
-# This script setups dockerized Redash on Ubuntu 22.04.
+# This script setups dockerized Ubuntu 22.04.
 
 set -eu
 
