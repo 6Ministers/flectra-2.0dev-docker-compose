@@ -2,6 +2,12 @@
 
 ## Quick Installation
 
+Ran for Ubuntu 22.04
+
+``` bash
+  sudo apt-get purge needrestart
+```
+
 Install docker and docker-compose:
 
 ``` bash
