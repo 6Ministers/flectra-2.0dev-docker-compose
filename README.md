@@ -5,13 +5,12 @@
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run the following to set up first Flectra instance @ `localhost:10020` (default master password: `master.password`):
 
 ``` bash
-curl -s https://raw.githubusercontent.com/minhng92/odoo-17-docker-compose/master/run.sh | sudo bash -s odoo-one 10017 20017
+curl -s https://raw.githubusercontent.com/6Ministers/flectra-2.0dev-docker-compose/master/run.sh | sudo bash -s flectra-one 10020 20020
 ```
-and/or run the following to set up another Odoo instance @ `localhost:11017` (default master password: `minhng.info`):
+and/or run the following to set up another Flectra instance @ `localhost:11017` (default master password: `minhng.info`):
 
 ``` bash
-curl -s https://raw.githubusercontent.com/minhng92/odoo-17-docker-compose/master/run.sh | sudo bash -s odoo-two 11017 21017
-```
+curl -s https://raw.githubusercontent.com/6Ministers/flectra-2.0dev-docker-compose/master/run.sh | sudo bash -s flectra-two 11020 21020
 
 Some arguments:
 * First argument (**flectra-one**): Flectra deploy folder
@@ -32,7 +31,7 @@ Start the container:
 ``` sh
 docker-compose up
 ```
-Then open `localhost:10017` to access Flectra 2.0.
+Then open `localhost:10020` to access Flectra 2.0.
 
 - **If you get any permission issues**, change the folder permission to make sure that the container is able to access the directory:
 
@@ -46,10 +45,10 @@ $ sudo chmod -R 777 postgresql
 
 ```
 ports:
- - "10017:8069"
+ - "10020:7073"
 ```
 
-- To run Odoo container in detached mode (be able to close terminal without stopping Flectra):
+- To run Flectra container in detached mode (be able to close terminal without stopping Flectra):
 
 ```
 docker-compose up -d
@@ -64,7 +63,7 @@ docker-compose up -d
  restart: always             # run as a service
 ```
 
-- To increase maximum number of files watching from 8192 (default) to **524288**. In order to avoid error when we run multiple Odoo instances. This is an *optional step*. These commands are for Ubuntu user:
+- To increase maximum number of files watching from 8192 (default) to **524288**. In order to avoid error when we run multiple Flectra instances. This is an *optional step*. These commands are for Ubuntu user:
 
 ```
 $ if grep -qF "fs.inotify.max_user_watches" /etc/sysctl.conf; then echo $(grep -F "fs.inotify.max_user_watches" /etc/sysctl.conf); else echo "fs.inotify.max_user_watches = 524288" | sudo tee -a /etc/sysctl.conf; fi
