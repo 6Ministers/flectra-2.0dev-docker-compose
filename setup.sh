@@ -5,7 +5,6 @@ set -eu
 install_docker() {
   # Install Docker
   export DEBIAN_FRONTEND=noninteractive
-  sudo apt-get purge needrestart
   sudo apt-get -qqy update
   DEBIAN_FRONTEND=noninteractive sudo -E apt-get -qqy -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
   sudo apt-get -yy install apt-transport-https ca-certificates curl software-properties-common pwgen gnupg
