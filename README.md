@@ -79,7 +79,7 @@ docker-compose up -d
 - To increase maximum number of files watching from 8192 (default) to **524288**. In order to avoid error when we run multiple Flectra instances. This is an *optional step*. These commands are for Ubuntu user:
 
 ```
-$ if grep -qF "fs.inotify.max_user_watches" /etc/sysctl.conf; then echo $(grep -F "fs.inotify.max_user_watches" /etc/sysctl.conf); else echo "fs.inotify.max_user_watches = 524288" | sudo tee -a /etc/sysctl.conf; fi
+$ if grep -qF "fs.inotify.max_user_watches" /etc/config/sysctl.conf; then echo $(grep -F "fs.inotify.max_user_watches" /etc/config/sysctl.conf); else echo "fs.inotify.max_user_watches = 524288" | sudo tee -a /etc/config/sysctl.conf; fi
 $ sudo sysctl -p    # apply new config immediately
 ``` 
 
