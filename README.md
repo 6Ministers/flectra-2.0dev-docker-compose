@@ -2,7 +2,7 @@
 
 ## Quick Installation
 
-Ran for Ubuntu 22.04
+Run for Ubuntu 22.04
 
 ``` bash
 sudo apt-get purge needrestart
