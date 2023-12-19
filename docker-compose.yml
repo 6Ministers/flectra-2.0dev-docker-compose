@@ -3,7 +3,7 @@ version: '3.8'
 services:
   db:
     image: postgres:14
-    user: root
+    user: flectra
     restart: always             # run as a service    
     environment:
       POSTGRES_USER: flectra
@@ -14,7 +14,7 @@ services:
     
   flectra:
     image: flectrahq/flectra:2.0
-    user: root
+    user: flectra
     restart: always             # run as a service 
     ports:
       - 10020:7073
