@@ -1,4 +1,4 @@
-# Installing FlectraHQ 2.0 with one command (Supports multiple FlectraHQ instances on one server).
+# Installing FlectraHQ 2.0 with one command (Supports multiple FlectraHQ instances on one server). For development.
 
 ## Quick Installation
 
