@@ -14,7 +14,7 @@ services:
     
   flectra:
     image: flectrahq/flectra:2.0
-    user: flectra
+    user: root
     restart: always             # run as a service 
     ports:
       - 10020:7073
