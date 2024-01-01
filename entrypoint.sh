@@ -11,7 +11,7 @@ set -e
 
 # install python packages
 pip3 install pip --upgrade
-pip3 install -r /etc/flectra/requirements.txt
+pip3 install -r /etc/requirements.txt
 
 # sed -i 's|raise werkzeug.exceptions.BadRequest(msg)|self.jsonrequest = {}|g' /usr/lib/python3/dist-packages/flectra/http.py
 
